@@ -1,40 +1,29 @@
 <template>
-  <v-app class="align-center">
-    <v-app-bar
-      app
-      color="blue"
-      dark
-      height=80px>
-      <img
-        alt="ICMC Logo"
-        src ="/icmc_logo.png"
-        transition="scale-transition"
-        style="height:100%; padding-top:8px; padding-bottom:5px;"
-        left/>
-      <v-spacer></v-spacer>
-      <router-link to="/" class="router-link"> Pesquisas </router-link>|
-      <router-link to="/about" class="router-link"> Sobre </router-link>
-    </v-app-bar>
+  <v-app style="background-color: #ECEFF1;">
+    <header-custom/>
     <v-main class="ma-5">
       <router-view/>
     </v-main>
+    <footer-custom/>
   </v-app>
 </template>
 
 <script>
+import HeaderCustom from './components/Header.vue';
+import FooterCustom from './components/Footer.vue';
 
 export default {
   name: 'App',
 
-  data: () => ({
-    //
-  }),
+  components: {
+    HeaderCustom,
+    FooterCustom,
+  },
 };
 </script>
 
-<style scoped>
-.router-link {
-  color: white;
-  margin: 5px;
+<style>
+.transparent {
+  background-color:transparent;
 }
 </style>

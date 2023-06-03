@@ -1,8 +1,8 @@
 <template>
-  <v-card width="100%">
+  <v-card width="100%" elevation="2" outlined rounded color="blue-grey lighten-4">
     <h1 class="ml-5 mt-3">Ordenar</h1>
     <v-divider class="mx-3"/>
-    <div id="select-box" class="ma-6">
+    <div id="select-box" class="ml-8 mb-4">
       <v-select
       v-model="ordering_aux"
       :items="sorts"
@@ -10,9 +10,10 @@
       item-text="texto"
       item-value="index"
       persistent-hint
-      style="width: 250px"/>
+      style="width: 260px"/>
       <v-btn-toggle
       v-model="inverted_aux"
+      class="transparent"
       style="transform: rotate(90deg) scale(0.8, 1);"
       mandatory
       rounded>

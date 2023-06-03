@@ -1,16 +1,14 @@
 <template>
   <v-expansion-panels>
     <v-expansion-panel>
-      <v-expansion-panel-header>
-        {{ title }}
+      <v-expansion-panel-header color="blue-grey lighten-4">
+        <b>{{ title }}</b>
       </v-expansion-panel-header>
-      <v-expansion-panel-content>
-        <v-simple-table>
-          <tr v-for='entry in entries' :key='entry.ordem'>
-            <td>
-              <research-entry :entry='entry'/>
-            </td>
-          </tr>
+      <v-expansion-panel-content color="blue-grey lighten-5">
+        <v-simple-table class="transparent">
+          <tbody>
+            <research-entry v-for='entry in entries' :key='entry.ordem' :entry='entry'/>
+          </tbody>
         </v-simple-table>
       </v-expansion-panel-content>
     </v-expansion-panel>

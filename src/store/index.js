@@ -6,6 +6,18 @@ Vue.use(Vuex);
 function normalizeString(str) {
   return str.toLowerCase().normalize('NFD').replace(/\p{Mn}/gu, '');
 }
+function getNameCurso(curso) {
+  switch (curso) {
+    case 'ME':
+      return 'Mestrado';
+    case 'DO':
+      return 'Doutorado';
+    case 'DD':
+      return 'Doutorado Direto';
+    default:
+      return 'Inválido';
+  }
+}
 
 export default new Vuex.Store({
   state: {
@@ -72,6 +84,10 @@ export default new Vuex.Store({
     },
     inverted(state) {
       return state.inverted;
+    },
+
+    nameCurso() {
+      return getNameCurso;
     },
   },
 
