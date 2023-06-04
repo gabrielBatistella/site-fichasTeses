@@ -16,7 +16,12 @@ Para facilitar a navegação pelas fichas, o site conta também com várias form
 ## :rocket: Rodando o código
 Para rodar o repositório é necessário clonar o mesmo e executar o seguinte comando para iniciar a aplicação:
 ```
-npm run build
+npm run serve
+```
+
+Caso ocorram erros envolvendo espaçamentos (LF ou CRLF), basta executar o seguinte comando antes de iniciar a aplicação:
+```
+npm run lint
 ```
 
 ## :handshake: Membros da equipe
