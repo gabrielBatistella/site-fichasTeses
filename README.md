@@ -25,6 +25,6 @@ npm run lint
 ```
 
 ## :handshake: Membros da equipe
-* <a href=https://www.linkedin.com/in/gabrielbatistella/> Gabriel Takeshi Miyake Batistella - 11232198 </a>
-* <a href=https://www.linkedin.com/in/thalesmaurin/> Thales Gomes Maurin - 11175712 </a>
-* <a href=https://www.linkedin.com/in/vitor-rinaldini/> Vitor Fernando Rinaldini - 11232305 </a>
+* <a href=https://www.linkedin.com/in/gabrielbatistella/> Gabriel Takeshi Miyake Batistella </a> - 11232198
+* <a href=https://www.linkedin.com/in/thalesmaurin/> Thales Gomes Maurin </a> - 11175712
+* <a href=https://www.linkedin.com/in/vitor-rinaldini/> Vitor Fernando Rinaldini </a> - 11232305
