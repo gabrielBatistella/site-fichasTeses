@@ -4,7 +4,7 @@
       <v-expansion-panel-header color="blue-grey lighten-4">
         <b>{{ title }}</b>
       </v-expansion-panel-header>
-      <v-expansion-panel-content color="blue-grey lighten-5">
+      <v-expansion-panel-content color="blue-grey lighten-5" class="pt-3">
         <v-simple-table class="transparent">
           <tbody>
             <research-entry v-for='entry in entries' :key='entry.ordem' :entry='entry'/>

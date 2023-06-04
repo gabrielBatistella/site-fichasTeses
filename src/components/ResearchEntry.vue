@@ -1,13 +1,13 @@
 <template>
   <tr>
     <td class="text-h6">
-      <b>{{ entry.Nome}}</b>
+      <b>{{ entry.Nome }}</b>
     </td>
     <td>
-      {{entry.Curso}} - {{  entry.Programa }}
+      {{ entry.Curso }} - {{ entry.Programa }}
     </td>
     <td>
-      {{entry.Data}}
+      {{ entry.Data }}
     </td>
   </tr>
 </template>

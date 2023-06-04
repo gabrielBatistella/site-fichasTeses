@@ -50,7 +50,10 @@
               <v-icon>mdi-school</v-icon>
             </v-btn>
             <v-spacer/>
-            <i>{{ professor.email }}</i>
+            <a :href="'mailto:' + professor.email" v-if="professor.email !== ''"
+            style="color: white;">
+              {{ professor.email }}
+            </a>
           </v-card-actions>
         </v-card>
       </span>
