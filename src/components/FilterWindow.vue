@@ -29,6 +29,8 @@
           <template v-slot:prepend>
             <v-text-field
               v-model="yearRange_aux[0]"
+              :max="anoFinal"
+              :min="anoInicial"
               class="ma-0 pa-0"
               single-line
               type="number"
@@ -39,8 +41,10 @@
           </template>
           <template v-slot:append>
             <v-text-field
-              class="ma-0 pa-0"
               v-model="yearRange_aux[1]"
+              :max="anoFinal"
+              :min="anoInicial"
+              class="ma-0 pa-0"
               single-line
               type="number"
               variant="outlined"

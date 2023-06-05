@@ -97,29 +97,21 @@ export default new Vuex.Store({
       this.dispatch('updateEntries');
     },
     setYearRange(state, data) {
-      const yearRange = data;
-      yearRange[0] = Math.max(data[0], state.anoInicial);
-      yearRange[1] = Math.min(data[1], state.anoFinal);
-      state.yearRange = yearRange;
+      state.yearRange[0] = Math.max(Math.min(...data), state.anoInicial);
+      state.yearRange[1] = Math.min(Math.max(...data), state.anoFinal);
       this.dispatch('updateEntries');
     },
     setSelectedCurso(state, data) {
-      let curso = data;
-      if (data > state.cursos.length) curso = 0;
-      state.selectedCurso = curso;
+      state.selectedCurso = (data <= state.cursos.length && data >= 0) ? data : 0;
       this.dispatch('updateEntries');
     },
     setSelectedPrograma(state, data) {
-      let programa = data;
-      if (data > state.programas.length) programa = 0;
-      state.selectedPrograma = programa;
+      state.selectedPrograma = (data <= state.programas.length && data >= 0) ? data : 0;
       this.dispatch('updateEntries');
     },
 
     setOrdering(state, data) {
-      let ordering = data;
-      if (data > 4) ordering = 0;
-      state.ordering = ordering;
+      state.ordering = (data <= 4 && data >= 0) ? data : 0;
       this.dispatch('updateEntries');
     },
     setInverted(state, data) {
