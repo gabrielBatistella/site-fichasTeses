@@ -19,7 +19,7 @@
     <v-spacer/>
     <router-link to="/" class="router-link"> Pesquisas </router-link>
     <span style="color:white"> | </span>
-    <router-link to="/about" class="router-link"> Sobre </router-link>
+    <router-link to="/sobre" class="router-link"> Sobre </router-link>
   </v-app-bar>
 </template>
 
