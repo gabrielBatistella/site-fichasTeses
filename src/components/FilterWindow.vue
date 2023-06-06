@@ -28,6 +28,7 @@
           class="align-center">
           <template v-slot:prepend>
             <v-text-field
+              id="left_field"
               v-model="yearRange_aux[0]"
               :max="anoFinal"
               :min="anoInicial"
@@ -37,10 +38,13 @@
               variant="outlined"
               style="width: 52px"
               density="compact"
+              @blur="updateText('left_field', yearRange_aux[0])"
+              @keydown.enter="updateText('left_field', yearRange_aux[0])"
             ></v-text-field>
           </template>
           <template v-slot:append>
             <v-text-field
+              id="right_field"
               v-model="yearRange_aux[1]"
               :max="anoFinal"
               :min="anoInicial"
@@ -50,6 +54,8 @@
               variant="outlined"
               style="width: 52px"
               density="compact"
+              @blur="updateText('right_field', yearRange_aux[1])"
+              @keydown.enter="updateText('right_field', yearRange_aux[1])"
             ></v-text-field>
           </template>
           </v-range-slider>
@@ -99,6 +105,10 @@ export default {
 
   methods: {
     ...mapMutations(['setNameSearch', 'setYearRange', 'setSelectedCurso', 'setSelectedPrograma']),
+
+    updateText(id, value) {
+      document.getElementById(id).value = value;
+    },
   },
 
   computed: {

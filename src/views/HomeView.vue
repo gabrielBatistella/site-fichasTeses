@@ -14,13 +14,21 @@
     <v-row>
       <tool-box/>
       <div class="ml-4" style="flex: 1;">
-        <entry-group
-        v-for="group in entriesToShow"
-        :key='group.title'
-        :entries='group.entries'
-        :title='(cursos.includes(group.title)) ? nameCurso(group.title) : group.title'
-        class="mb-3"
-        style="display: block;"/>
+        <span v-if="entriesToShow.length === 0">
+          <v-row
+          class="mt-5 text-h4 justify-center">
+            <span style="color:#90A4AE;">Sem resultados.</span>
+          </v-row>
+        </span>
+        <span v-else>
+          <entry-group
+          v-for="group in entriesToShow"
+          :key='group.title'
+          :entries='group.entries'
+          :title='(cursos.includes(group.title)) ? nameCurso(group.title) : group.title'
+          class="mb-3"
+          style="display: block;"/>
+        </span>
       </div>
     </v-row>
   </span>
