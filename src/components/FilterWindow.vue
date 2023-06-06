@@ -28,8 +28,8 @@
           class="align-center">
           <template v-slot:prepend>
             <v-text-field
-              id="left_field"
               v-model="yearRange_aux[0]"
+              :key="updateKey1"
               :max="anoFinal"
               :min="anoInicial"
               class="ma-0 pa-0"
@@ -38,14 +38,13 @@
               variant="outlined"
               style="width: 52px"
               density="compact"
-              @blur="updateText('left_field', yearRange_aux[0])"
-              @keydown.enter="updateText('left_field', yearRange_aux[0])"
-            ></v-text-field>
+              @blur="updateKey1 ^= 1"
+              @keydown.enter="updateKey1 ^= 1"/>
           </template>
           <template v-slot:append>
             <v-text-field
-              id="right_field"
               v-model="yearRange_aux[1]"
+              :key="updateKey2"
               :max="anoFinal"
               :min="anoInicial"
               class="ma-0 pa-0"
@@ -54,9 +53,8 @@
               variant="outlined"
               style="width: 52px"
               density="compact"
-              @blur="updateText('right_field', yearRange_aux[1])"
-              @keydown.enter="updateText('right_field', yearRange_aux[1])"
-            ></v-text-field>
+              @blur="updateKey2 ^= 1"
+              @keydown.enter="updateKey2 ^= 1"/>
           </template>
           </v-range-slider>
         </v-list-item>
@@ -102,6 +100,13 @@ import { mapGetters, mapMutations } from 'vuex';
 
 export default {
   name: 'FilterWindow',
+
+  data() {
+    return {
+      updateKey1: 0,
+      updateKey2: 0,
+    };
+  },
 
   methods: {
     ...mapMutations(['setNameSearch', 'setYearRange', 'setSelectedCurso', 'setSelectedPrograma']),

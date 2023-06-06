@@ -15,6 +15,7 @@
 <script>
 export default {
   name: 'ResearchEntry',
+
   props: {
     entry: {
       type: Object,

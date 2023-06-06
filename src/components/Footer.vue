@@ -65,33 +65,35 @@
 export default {
   name: 'FooterCustom',
 
-  data: () => ({
-    icons: [
-      'mdi-facebook',
-      'mdi-twitter',
-      'mdi-linkedin',
-      'mdi-instagram',
-    ],
+  data() {
+    return {
+      icons: [
+        'mdi-facebook',
+        'mdi-twitter',
+        'mdi-linkedin',
+        'mdi-instagram',
+      ],
 
-    professores: [
-      {
-        link_image: '/professores/adenilso.jpg',
-        nome: 'Adenilso da Silva Simão',
-        cargo: 'Docente responsável',
-        email: 'adenilso@icmc.usp.br',
-        linkedin: 'https://www.linkedin.com/in/adenilso-simao-7a478118/',
-        icmc: 'https://www.icmc.usp.br/pessoas?id=6078529',
-      },
-      {
-        link_image: '/professores/rodrigo.jpeg',
-        nome: 'Rodrigo Henrique Ramos',
-        cargo: 'Estagiário PAE',
-        email: 'rodrigohenrique.ramos@usp.br',
-        linkedin: 'https://www.linkedin.com/in/rodrigo-ramos-166b69230/',
-        icmc: '',
-      },
-    ],
-  }),
+      professores: [
+        {
+          link_image: '/professores/adenilso.jpg',
+          nome: 'Adenilso da Silva Simão',
+          cargo: 'Docente responsável',
+          email: 'adenilso@icmc.usp.br',
+          linkedin: 'https://www.linkedin.com/in/adenilso-simao-7a478118/',
+          icmc: 'https://www.icmc.usp.br/pessoas?id=6078529',
+        },
+        {
+          link_image: '/professores/rodrigo.jpeg',
+          nome: 'Rodrigo Henrique Ramos',
+          cargo: 'Estagiário PAE',
+          email: 'rodrigohenrique.ramos@usp.br',
+          linkedin: 'https://www.linkedin.com/in/rodrigo-ramos-166b69230/',
+          icmc: '',
+        },
+      ],
+    };
+  },
 };
 </script>
 
